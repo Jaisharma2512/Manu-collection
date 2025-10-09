@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manu Collection | Oldest Crockery Shop in Bazpur</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; color: #222; margin: 0; background: #f7f8fa; }
+    header, footer { background: #2d3e50; color: #fff; padding: 1em 2em; text-align: center; }
+    nav { background: #ffc107; padding: 1em 0; text-align: center; }
+    nav a { margin: 0 1.5em; color: #2d3e50; text-decoration: none; font-weight: bold; }
+    .hero { background: url('hero-crockery.jpg') no-repeat center/cover; padding: 5em 2em; color: #fff; text-shadow: 0 2px 4px #2228; }
+    .categories, .featured, .about, .why, .reviews, .gift { max-width: 1100px; margin: 2em auto; background: #fff; padding: 2em; border-radius: 16px; }
+    h1, h2 { margin: 0.5em 0; }
+    .grid { display: flex; gap: 2em; flex-wrap: wrap; }
+    .product-card { flex: 1 0 220px; background: #f3f3f6; border-radius: 12px; padding: 1.2em; text-align: center; }
+    .product-card img { max-width: 100%; height: 170px; object-fit: cover; border-radius: 10px; }
+    .review { background: #efe; border-left: 4px solid #ffc107; padding: 1em; border-radius: 8px; margin-bottom: 1em; }
+    footer { font-size: 0.95em; }
+    
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      nav a { display: block; margin: 0.5em 0; }
+      .grid { flex-direction: column; }
+      .product-card { flex: 1 0 auto; }
+      .hero { padding: 3em 1em; font-size: 90%; }
+      header, footer { padding: 1em; font-size: 90%; }
+      .categories, .featured, .about, .why, .reviews, .gift { padding: 1em; margin: 1em; border-radius: 12px; }
+    }
+
+    @media (max-width: 400px) {
+      nav a { margin: 0.3em 0; font-size: 90%; }
+      .hero { padding: 2em 1em; font-size: 80%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Manu Collection</h1>
+    <p>The Oldest Crockery Shop in Bazpur</p>
+  </header>
+  <nav>
+    <a href="#categories">Categories</a>
+    <a href="#featured">Featured</a>
+    <a href="#gift">Gift Corner</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <section class="hero">
+    <h2>Explore Premium Crockery, Appliances & Gifts</h2>
+    <p>Luxury for your kitchen. Essentials for every home. Gifts for every occasion.</p>
+  </section>
+  <section id="categories" class="categories">
+    <h2>Shop by Category</h2>
+    <div class="grid">
+      <div class="product-card">
+        <img src="crockery.jpg" alt="Crockery" />
+        <h3>Crockery & Tableware</h3>
+      </div>
+      <div class="product-card">
+        <img src="purifier.jpg" alt="Water Purifiers" />
+        <h3>Water Purifiers</h3>
+      </div>
+      <div class="product-card">
+        <img src="appliance.jpg" alt="Appliances" />
+        <h3>Home Appliances</h3>
+      </div>
+      <div class="product-card">
+        <img src="stove.jpg" alt="Gas Stoves" />
+        <h3>Gas Stoves</h3>
+      </div>
+      <div class="product-card">
+        <img src="gift.jpg" alt="Gift Items" />
+        <h3>Gift Items</h3>
+      </div>
+    </div>
+  </section>
+  <section id="featured" class="featured">
+    <h2>Featured Products</h2>
+    <div class="grid">
+      <div class="product-card">
+        <img src="featured1.jpg" alt="Elegant Dinner Set" />
+        <h3>Elegant Dinner Set</h3>
+        <p>Stylish 16-piece premium crockery set.</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="featured2.jpg" alt="Eco Water Purifier" />
+        <h3>Eco Water Purifier</h3>
+        <p>Safe, clean water for your home.</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+  <section id="gift" class="gift">
+    <h2>Gift Corner</h2>
+    <p>Discover unique gifts for your loved ones: curated crockery sets, festive hampers, and exclusive home accessories!</p>
+  </section>
+  <section id="about" class="about">
+    <h2>About Manu Collection</h2>
+    <p>Situated in the heart of Bazpur, Manu Collection is the oldest crockery shop in town. We have proudly served our community for decades, offering quality crockery, essential home appliances, and beautiful gift items with unmatched customer care.</p>
+  </section>
+  <section class="why">
+    <h2>Why Shop With Us?</h2>
+    <ul>
+      <li>Wide range of trusted brands</li>
+      <li>Premium quality products</li>
+      <li>Best price guarantee</li>
+      <li>Expert customer care</li>
+      <li>Fast shipping & easy returns</li>
+    </ul>
+  </section>
+  <section class="reviews">
+    <h2>Customer Reviews</h2>
+    <div class="review">
+      "Excellent variety and quick delivery. Bought a dinner set and water purifier—couldn't be happier!" - Riya S.
+    </div>
+    <div class="review">
+      "Beautiful gift packaging. Will shop again!" - Arjun T.
+    </div>
+  </section>
+  <footer id="contact">
+    <p>Visit us: Bazpur Market, Bazpur | Call: 9412667937 | Email: info@manucollection.com</p>
+    <p>Follow us: Instagram | Facebook | Twitter</p>
+    <p>&copy; 2025 Manu Collection. All rights reserved.</p>
+  </footer>
+</body>
+</html>
