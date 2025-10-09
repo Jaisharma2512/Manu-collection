@@ -6,12 +6,29 @@
   <title>Manu Collection | Oldest Crockery Shop in Bazpur</title>
   <style>
     body { font-family: 'Segoe UI', sans-serif; color: #222; margin: 0; background: #f7f8fa; }
-    header, footer { background: #2d3e50; color: #fff; padding: 1em 2em; text-align: center; }
+    header, footer { background: #2d3e50; color: #fff; padding: 1em 2em; text-align: center; position: relative; }
     nav { background: #ffc107; padding: 1em 0; text-align: center; }
     nav a { margin: 0 1.5em; color: #2d3e50; text-decoration: none; font-weight: bold; }
+    .greetings {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1100px;
+      margin: 0.2em auto 0;
+      font-family: 'Mangal', 'Noto Sans Devanagari', serif;
+      font-weight: 600;
+      font-size: 1.2em;
+      color: #ffd54f;
+    }
     .hero { background: url('hero-crockery.jpg') no-repeat center/cover; padding: 5em 2em; color: #fff; text-shadow: 0 2px 4px #2228; }
-    .categories, .featured, .about, .why, .reviews, .gift { max-width: 1100px; margin: 2em auto; background: #fff; padding: 2em; border-radius: 16px; }
+    .categories, .featured, .about, .why, .reviews, .gift, .trust { max-width: 1100px; margin: 2em auto; background: #fff; padding: 2em; border-radius: 16px; }
     h1, h2 { margin: 0.5em 0; }
+    .tagline {
+      color: #ffc107;
+      margin-bottom: 0.7em;
+      font-size: 1.2em;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+    }
     .grid { display: flex; gap: 2em; flex-wrap: wrap; }
     .product-card { flex: 1 0 220px; background: #f3f3f6; border-radius: 12px; padding: 1.2em; text-align: center; }
     .product-card img { max-width: 100%; height: 260px; object-fit: cover; border-radius: 10px; }
@@ -23,7 +40,8 @@
       .product-card { flex: 1 0 auto; }
       .hero { padding: 3em 1em; font-size: 90%; }
       header, footer { padding: 1em; font-size: 90%; }
-      .categories, .featured, .about, .why, .reviews, .gift { padding: 1em; margin: 1em; border-radius: 12px; }
+      .categories, .featured, .about, .why, .reviews, .gift, .trust { padding: 1em; margin: 1em; border-radius: 12px; }
+      .greetings { flex-direction: column; align-items: center; gap: 0.5em; font-size: 1.1em;}
     }
     @media (max-width: 400px) {
       nav a { margin: 0.3em 0; font-size: 90%; }
@@ -33,8 +51,12 @@
 </head>
 <body>
   <header>
+    <div class="greetings">
+      <div>ਸਤ ਸ੍ਰੀ ਅਕਾਲ</div>
+      <div>नमस्ते</div>
+    </div>
     <h1>Manu Collection</h1>
-    <p>The Oldest Crockery Shop in Bazpur</p>
+    <div class="tagline">Your favourite and oldest crockery shop in Bazpur. Welcome</div>
   </header>
   <nav>
     <a href="#categories">Categories</a>
@@ -115,6 +137,17 @@
     <div class="review">
       "Beautiful gift packaging. Will shop again!" - Arjun T.
     </div>
+  </section>
+  <section class="trust" style="background: #eaf5fb; padding: 2em; border-radius: 16px; max-width: 1100px; margin: 2em auto; color: #06577a;">
+    <h2>Our Commitment to You</h2>
+    <p>At Manu Collection, we value your trust above everything. We adhere to strict ethical standards and full transparency to ensure you shop with confidence and peace of mind.</p>
+    <ul>
+      <li>100% Authentic and Quality Products</li>
+      <li>Transparent and Honest Business Practices</li>
+      <li>Easy Returns and Warranty on Products</li>
+      <li>Dedicated Customer Support Team</li>
+    </ul>
+    <p>Thank you for being a valued customer. Our reputation as Bazpur's oldest crockery shop is built on trust and exceptional service.</p>
   </section>
   <footer id="contact">
     <p>Visit us: Bazpur Market, Bazpur | Call: 9412667937 | Email: info@manucollection.com</p>
