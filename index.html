@@ -44,19 +44,32 @@
     color: #fff;
     text-shadow: 0 2px 4px #2228;
   }
+  .international-promo {
+    max-width: 1100px;
+    margin: 1em auto;
+    background: #fff4db;
+    color: #6e4b00;
+    padding: 1.5em 2em;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1em;
+    line-height: 1.4;
+    box-shadow: 0 3px 14px rgba(255, 193, 7, 0.4);
+  }
   .promotion {
     display: flex;
     align-items: center;
     gap: 2em;
     max-width: 1100px;
     margin: 2em auto;
-    background: linear-gradient(90deg,#fff8e1,#ffd89b);
+    background: linear-gradient(90deg, #fff8e1, #ffd89b);
     color: #856404;
     font-weight: bold;
     font-size: 1.2em;
     text-align: left;
     border-radius: 18px;
-    box-shadow: 0 4px 28px rgba(252,182,159,0.14);
+    box-shadow: 0 4px 28px rgba(252, 182, 159, 0.14);
     flex-wrap: wrap;
     padding: 1.5em;
   }
@@ -81,7 +94,7 @@
     flex-direction: column;
     gap: 0.18em;
   }
-  .promotion .avail-btn {
+  .avail-btn {
     margin-top: 1em;
     background: linear-gradient(90deg,#ffe39c 0,#ffc107 100%);
     color: #6d490a;
@@ -98,7 +111,7 @@
     min-width: 160px;
     text-align: center;
   }
-  .promotion .avail-btn:hover {
+  .avail-btn:hover {
     background: #ffd54f;
   }
   @media (max-width: 700px) {
@@ -119,7 +132,7 @@
     .promotion-text {
       min-width: 0;
     }
-    .promotion .avail-btn {
+    .avail-btn {
       width: 100%;
       align-self: stretch;
       min-width: 100px;
@@ -172,7 +185,9 @@
     border-radius: 8px;
     margin-bottom: 1em;
   }
-  label { font-weight: bold; }
+  label { 
+    font-weight: bold; 
+  }
   input, textarea {
     width: 100%;
     box-sizing: border-box;
@@ -193,13 +208,28 @@
     text-decoration: none;
     color: #000;
   }
-  button:hover, a.button:hover { background: #e6b006; }
+  button:hover, a.button:hover { 
+    background: #e6b006; 
+  }
   @media (max-width: 768px) {
-    nav a { display: block; margin: 0.5em 0; }
-    .grid { flex-direction: column; }
-    .product-card { flex: 1 0 auto; }
-    .hero { padding: 3em 1em; font-size: 90%; }
-    header, footer { padding: 1em; font-size: 90%; }
+    nav a { 
+      display: block; 
+      margin: 0.5em 0; 
+    }
+    .grid { 
+      flex-direction: column; 
+    }
+    .product-card { 
+      flex: 1 0 auto; 
+    }
+    .hero { 
+      padding: 3em 1em; 
+      font-size: 90%; 
+    }
+    header, footer { 
+      padding: 1em; 
+      font-size: 90%; 
+    }
     .categories, .featured, .about, .why, .reviews, .gift, .trust, #contact-form {
       padding: 1em;
       margin: 1em;
@@ -213,10 +243,18 @@
     }
   }
   @media (max-width: 400px) {
-    nav a { margin: 0.3em 0; font-size: 90%; }
-    .hero { padding: 2em 1em; font-size: 80%; }
+    nav a { 
+      margin: 0.3em 0; 
+      font-size: 90%; 
+    }
+    .hero { 
+      padding: 2em 1em; 
+      font-size: 80%; 
+    }
   }
-  footer { font-size: 0.95em; }
+  footer { 
+    font-size: 0.95em; 
+  }
 </style>
 </head>
 <body>
@@ -240,6 +278,17 @@
   <h2>Explore Premium Crockery, Appliances & Gifts</h2>
   <p>Luxury for your kitchen. Essentials for every home. Gifts for every occasion.</p>
 </section>
+
+<section class="international-promo">
+  <p>30 saal ka vishwaas aur quality! 🌟</p>
+  <p>
+    Bazpur se lekar Canada, UK, Australia, America aur Germany tak hamari crockery aur kitchenware ne har ghar mein apni khaas jagah banayi hai. 💎 Ab humne apni services ko aur expand karte hue international shipping bhi shuru ki hai! ✈🌍
+  </p>
+  <p>
+    Aur Bazpur ke 3 km ke radius mein hum laa rahe hain quick aur convenient home delivery service!
+  </p>
+</section>
+
 <section class="promotion">
   <img src="kitchen.jpg" alt="Kitchen Offer" />
   <div class="promotion-text">
@@ -249,6 +298,7 @@
     <button class="avail-btn" onclick="window.open('https://wa.me/9412667937', '_blank');">Take quotation</button>
   </div>
 </section>
+
 <section id="categories" class="categories">
   <h2>Shop by Category</h2>
   <div class="grid">
@@ -274,6 +324,7 @@
     </div>
   </div>
 </section>
+
 <section id="featured" class="featured">
   <h2>Featured Products</h2>
   <div class="grid">
@@ -297,16 +348,19 @@
     </div>
   </div>
 </section>
+
 <section id="gift" class="gift">
   <h2>Gift Corner</h2>
   <p>Discover unique gifts for your loved ones: curated crockery sets, festive hampers, and exclusive home accessories!</p>
 </section>
+
 <section id="about" class="about">
   <h2>About Manu Collection</h2>
   <p>
     Situated in the heart of Bazpur, Manu Collection is the oldest crockery shop in town. We have proudly served our community for decades, offering quality crockery, essential home appliances, and beautiful gift items with unmatched customer care.
   </p>
 </section>
+
 <section class="why">
   <h2>Why Shop With Us?</h2>
   <ul>
@@ -317,6 +371,7 @@
     <li>Fast shipping & easy returns</li>
   </ul>
 </section>
+
 <section class="reviews">
   <h2>Customer Reviews</h2>
   <div class="review">
@@ -326,6 +381,7 @@
     "Beautiful gift packaging. Will shop again!" - Arjun T.
   </div>
 </section>
+
 <section id="contact-form">
   <h2>Contact Us</h2>
   <form action="mailto:info@manucollection.com" method="post" enctype="text/plain">
@@ -338,6 +394,7 @@
     <button type="submit">Send</button>
   </form>
 </section>
+
 <section class="trust" style="background: #eaf5fb; padding: 2em; border-radius: 16px; max-width: 1100px; margin: 2em auto; color: #06577a;">
   <h2>Our Commitment to You</h2>
   <p>At Manu Collection, we value your trust above everything. We adhere to strict ethical standards and full transparency to ensure you shop with confidence and peace of mind.</p>
@@ -349,6 +406,7 @@
   </ul>
   <p>Thank you for being a valued customer. Our reputation as Bazpur's oldest crockery shop is built on trust and exceptional service.</p>
 </section>
+
 <footer id="contact">
   <p>Visit us: Bazpur Market, Bazpur | Call: 9412667937 | Email: info@manucollection.com</p>
   <p>Follow us: Instagram | Facebook | Twitter</p>
