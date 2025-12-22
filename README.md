@@ -1,14 +1,16 @@
-Ideated and developed a web application for a Small-Medium Enterprise, which helped in increasing the user base by 30%.
+# React + Vite
 
-<img width="1902" height="866" alt="image" src="https://github.com/user-attachments/assets/03ec1c07-5f51-41a0-b72d-137fdb51e9cc" />
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-<img width="1900" height="871" alt="image" src="https://github.com/user-attachments/assets/3f8e9a68-8abb-4e1b-a271-4a14ca774ecd" />
+Currently, two official plugins are available:
 
-<img width="1891" height="865" alt="image" src="https://github.com/user-attachments/assets/2b56327c-8d85-4f3c-982e-67a3eef907a1" />
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
+## React Compiler
 
-The "Take quotation" button helps in landing the user in the related WhatsApp group and contact.
+The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
 
+## Expanding the ESLint configuration
 
-
-<img width="1892" height="857" alt="image" src="https://github.com/user-attachments/assets/e05b19bd-7450-4ad1-b80c-99fe26837d20" />
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
