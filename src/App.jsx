@@ -1,4 +1,3 @@
-// src/App.jsx
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./assets/css/styles.css";
@@ -14,7 +13,7 @@ export default function App() {
         <a href="#gift">Gift Corner</a>
         <a href="#about">About Us</a>
         <a href="#glass-range">Glass Range</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact-form">Contact</a>
       </nav>
 
       <section className="hero">
@@ -39,19 +38,25 @@ export default function App() {
         </p>
       </section>
 
-      <section className="diwali-promo">
-        <h2>Diwali Dhamaka Sale! 🪔</h2>
+      {/* UPDATED: Christmas / New Year promo */}
+      <section className="christmas-promo">
+        <h2>Christmas &amp; New Year Sale! 🎄✨</h2>
         <ul>
           <li>
-            Old gas stove ke badle mein naye gas stove par heavy discount.
+            Old gas stove ke badle mein naye glass-top gas stove par heavy
+            discount – nayi rasoi ke liye perfect upgrade.
           </li>
           <li>
-            Special Gift Items combo sets available hain, under price range:
-            400, 600, 800, 1000, 2000, 3000 aur bhi bahut kuch.
+            Special Christmas Gift Combo Sets available hain, price range: 400,
+            600, 800, 1000, 2000, 3000 – friends &amp; family ke liye ready-made
+            gifts.
           </li>
           <li>
-            Festival season mai purane cookers lane par naye cookers par bhari
-            chhoot.
+            Winter / New Year season mein purane cookers lane par branded naye
+            cookers par bhari chhoot.
+          </li>
+          <li>
+          Heavy discount on Induction Cookers and Electric Kettles
           </li>
         </ul>
         <button
@@ -59,7 +64,7 @@ export default function App() {
             window.open("https://wa.me/9412667937", "_blank", "noreferrer")
           }
         >
-          Take quotation
+          Take Quotation
         </button>
       </section>
 
@@ -157,7 +162,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* NEW Glass Range section */}
       <section id="glass-range" className="categories">
         <h2>Glass Range</h2>
         <div className="grid">
@@ -180,68 +184,42 @@ export default function App() {
         </div>
       </section>
 
-      <section id="gift" className="gift">
-        <h2>Gift Corner</h2>
-        <p>
-          Discover unique gifts for your loved ones: curated crockery sets,
-          festive hampers, and exclusive home accessories!
-        </p>
-      </section>
-
-      <section id="about" className="about">
-        <h2>About Manu Collection</h2>
-        <p>
-          Situated in the heart of Bazpur, Manu Collection is the oldest
-          crockery shop in town. We have proudly served our community for
-          decades, offering quality crockery, essential home appliances, and
-          beautiful gift items with unmatched customer care.
-        </p>
-      </section>
-
-      <section className="why">
-        <h2>Why Shop With Us?</h2>
-        <ul>
-          <li>Wide range of trusted brands</li>
-          <li>Premium quality products</li>
-          <li>Best price guarantee</li>
-          <li>Expert customer care</li>
-          <li>Fast shipping &amp; easy returns</li>
-        </ul>
-      </section>
-
       <section className="reviews">
         <h2>Customer Reviews</h2>
         <div className="review">
-          "Excellent variety and quick delivery. Bought a dinner set and water
-          purifier—couldn't be happier!" - Riya S.
+          "Main Manu Collection tohn 32-piece dinner set lita, quality bohot vadiya haigi aedi te design v bahut sohna aa. Ghar aunde mehman vi khush ho gaye, paisa vasool laggya ji" - Arjun Sandhu.
         </div>
-        <div className="review">
-          "Beautiful gift packaging. Will shop again!" - Arjun T.
+         <div className="review">
+          "Maine ek Phillips ka induction cooker liya tha jiski 24 hours mai service available ho gyi " - Riya Bisht.
         </div>
       </section>
 
-      <section id="contact-form">
-        <h2>Contact Us</h2>
-        <form
-          action="mailto:info@manucollection.com"
-          method="post"
-          encType="text/plain"
-        >
-          <label htmlFor="name">Name:</label>
-          <br />
-          <input type="text" id="name" name="name" required />
-          <br />
-          <label htmlFor="email">Email:</label>
-          <br />
-          <input type="email" id="email" name="email" required />
-          <br />
-          <label htmlFor="message">Message:</label>
-          <br />
-          <textarea id="message" name="message" rows="4" required />
-          <br />
-          <button type="submit">Send</button>
-        </form>
-      </section>
+
+
+<section id="contact-form">
+  <h2>Contact Us</h2>
+  <p>
+    For any product enquiry, bulk order, or festive offer details, reach us on:
+  </p>
+  <ul style={{ listStyle: "none", padding: 0, margin: "1em 0" }}>
+    <li>
+      <strong>Phone / WhatsApp:</strong> 9412667937, 7055376261
+    </li>
+    <li>
+      <strong>Phone:</strong> 7055376261
+    </li>
+    <li>
+      <strong>Facebook:</strong> Manu Collections Bazpur
+    </li>
+        <li>
+      <strong>Instagram:</strong> manucollectionsbazpur
+    </li>
+    <li>
+      <strong>Store:</strong> Manu Collection Opp Adarsh Kanya Junior High School
+    </li>
+  </ul>
+</section>
+
 
       <section className="trust">
         <h2>Our Commitment to You</h2>

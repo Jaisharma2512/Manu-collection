@@ -70,7 +70,8 @@ nav a {
   }
 }
 
-.diwali-promo {
+/* UPDATED: Christmas/Winter/New Year promo */
+.christmas-promo {
   max-width: 1100px;
   margin: 1em auto 2em;
   color: #662e00;
@@ -86,12 +87,12 @@ nav a {
   transition: box-shadow 0.5s ease;
 }
 
-.diwali-promo h2 {
+.christmas-promo h2 {
   margin-bottom: 0.5em;
   font-size: 2.5em;
 }
 
-.diwali-promo ul {
+.christmas-promo ul {
   list-style: none;
   padding: 0;
   margin: 1em 0 0;
@@ -102,17 +103,17 @@ nav a {
   font-size: 1.2em;
 }
 
-.diwali-promo ul li::before {
-  content: "🔥 ";
+.christmas-promo ul li::before {
+  content: "🎄 ";
   color: #ff6f00;
   font-weight: bold;
 }
 
-.diwali-promo ul li {
+.christmas-promo ul li {
   margin-bottom: 1em;
 }
 
-.diwali-promo button {
+.christmas-promo button {
   margin-top: 1.5em;
   background: #ff6f00;
   border: none;
@@ -127,10 +128,12 @@ nav a {
   text-transform: uppercase;
 }
 
-.diwali-promo button:hover {
+.christmas-promo button:hover {
   background: #e65c00;
   box-shadow: 0 10px 25px rgba(230, 92, 0, 0.9);
 }
+
+/* — rest of your existing CSS unchanged — */
 
 .promotion {
   display: flex;
