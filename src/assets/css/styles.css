@@ -225,7 +225,7 @@ footer {
 .greetings {
   display: flex;
   justify-content: space-between;
-  max-width: 1100px;
+  max-width: 92%;
   margin: 0.2em auto 0;
   font-family: "Mangal", "Noto Sans Devanagari";
   font-weight: 600;
@@ -241,8 +241,9 @@ footer {
 }
 
 .international-promo {
-  max-width: 1100px;
-  margin: 1em auto;
+  width: 92%;
+  max-width: 1600px;
+  margin: 1.5em auto;
   background: #fff4db;
   color: #6e4b00;
   padding: 1.5em 2em;
@@ -252,6 +253,7 @@ footer {
   font-size: 1.1em;
   line-height: 1.4;
   box-shadow: 0 3px 14px rgba(255, 193, 7, 0.4);
+  box-sizing: border-box;
 }
 
 /* ────────────────────────────────────────
@@ -265,8 +267,9 @@ footer {
 }
 
 .christmas-promo {
-  max-width: 1100px;
-  margin: 2em auto;
+  width: 92%;
+  max-width: 1600px;
+  margin: 1.5em auto;
   padding: 3em 3.5em;
   border-radius: 20px;
   font-weight: 600;
@@ -283,7 +286,6 @@ footer {
     inset 0 1px 0 rgba(255, 215, 0, 0.08);
 }
 
-/* Gold shimmer top line */
 .christmas-promo::before {
   content: "";
   position: absolute;
@@ -313,7 +315,7 @@ footer {
   padding: 0;
   margin: 1.5em auto 0;
   text-align: left;
-  max-width: 650px;
+  max-width: 750px;
   font-size: 1em;
 }
 
@@ -370,7 +372,8 @@ footer {
   display: flex;
   align-items: center;
   gap: 2em;
-  max-width: 1100px;
+  width: 92%;
+  max-width: 1600px;
   margin: 2em auto;
   background: linear-gradient(90deg, #fff8e1, #ffd89b);
   color: #856404;
@@ -381,6 +384,7 @@ footer {
   box-shadow: 0 4px 28px rgba(252, 182, 159, 0.14);
   flex-wrap: wrap;
   padding: 1.5em;
+  box-sizing: border-box;
 }
 
 .promotion img {
@@ -428,6 +432,10 @@ footer {
   background: #ffd54f;
 }
 
+/* ────────────────────────────────────────
+   CONTENT SECTIONS — luxury full-width feel
+──────────────────────────────────────── */
+
 .categories,
 .featured,
 .about,
@@ -436,11 +444,14 @@ footer {
 .gift,
 .trust,
 #contact-form {
-  max-width: 1100px;
+  width: 92%;
+  max-width: 1600px;
   margin: 2em auto;
   background: #fff;
-  padding: 2em;
-  border-radius: 16px;
+  padding: 2.5em 3em;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+  box-sizing: border-box;
 }
 
 h1,
@@ -458,16 +469,23 @@ h2 {
 
 .grid {
   display: flex;
-  gap: 2em;
+  gap: 1.5em;
   flex-wrap: wrap;
 }
 
 .product-card {
-  flex: 1 0 220px;
-  background: #f3f3f6;
-  border-radius: 12px;
+  flex: 1 0 200px;
+  background: #f8f8fb;
+  border-radius: 16px;
   padding: 1.2em;
   text-align: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
 
 .product-card img {
@@ -484,11 +502,15 @@ h2 {
 }
 
 .review {
-  background: #efe;
+  background: linear-gradient(135deg, #f9fff9, #efffef);
   border-left: 4px solid #ffc107;
-  padding: 1em;
-  border-radius: 8px;
+  padding: 1.2em 1.5em;
+  border-radius: 12px;
   margin-bottom: 1em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  font-style: italic;
+  color: #333;
+  line-height: 1.6;
 }
 
 label {
@@ -524,6 +546,10 @@ a.button:hover {
   background: #e6b006;
 }
 
+/* ────────────────────────────────────────
+   MOBILE OVERRIDES
+──────────────────────────────────────── */
+
 @media (max-width: 768px) {
   .grid {
     flex-direction: column;
@@ -539,9 +565,20 @@ a.button:hover {
     padding: 1em;
     font-size: 90%;
   }
+  .international-promo {
+    width: calc(100% - 2em);
+    margin: 0.5em 1em;
+    padding: 1em;
+  }
   .christmas-promo {
-    padding: 2em 1.2em;
+    width: calc(100% - 2em);
+    margin: 0.5em 1em;
+    padding: 1.5em 1em;
     font-size: 1em;
+  }
+  .promotion {
+    width: calc(100% - 2em);
+    margin: 1em;
   }
   .categories,
   .featured,
@@ -551,9 +588,10 @@ a.button:hover {
   .gift,
   .trust,
   #contact-form {
-    padding: 1em;
-    margin: 1em;
-    border-radius: 12px;
+    width: calc(100% - 2em);
+    padding: 1.2em 1em;
+    margin: 0.5em 1em;
+    border-radius: 14px;
   }
 }
 
