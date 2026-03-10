@@ -9,16 +9,6 @@ export default function App() {
     <>
       <Header />
 
-      <nav>
-        <a href="#categories">Categories</a>
-        <a href="#featured">Featured</a>
-        <a href="#gift">Gift Corner</a>
-        <a href="#about">About Us</a>
-        <a href="#glass-range">Glass Range</a>
-        <a href="#contact-form">Contact</a>
-        <a href="/admin" style={{color: 'red', fontWeight: 'bold'}}>🔐 Admin</a>
-      </nav>
-
       <section className="hero">
         <h2>Explore Premium Crockery, Appliances & Gifts</h2>
         <p>
@@ -45,20 +35,18 @@ export default function App() {
         <h2>Holi & Ramzaan Sale! ✨</h2>
         <ul>
           <li>
-            Old gas stove ke badle mein naye glass-top gas stove par heavy
-            discount – nayi rasoi ke liye perfect upgrade.
+            Puraane chulhe/Old gas stove ke badle mein naye glass-top gas stove par
+             heavy discount – nayi rasoi ke liye perfect upgrade.
           </li>
           <li>
-            Special Christmas Gift Combo Sets available hain, price range: 400,
-            600, 800, 1000, 2000, 3000 – friends & family ke liye ready-made
-            gifts.
+            Special Holi and Ramzaan Gift Combo Sets available hain, price range: 
+            400, 600, 800, 1000, 2000, 3000 – friends & family ke liye ready-made gifts.
           </li>
           <li>
-            Winter / New Year season mein purane cookers lane par branded naye
-            cookers par bhari chhoot.
+            Garmion ke season mein purane cookers lane par branded naye cookers par bhari chhoot.
           </li>
           <li>
-            Heavy discount on Induction Cookers and Electric Kettles
+            Heavy discount on Water Coolers, Juicer Mixer Grinder, Food Processors, Kalsi Juice Machine and glasses.
           </li>
         </ul>
         <button
