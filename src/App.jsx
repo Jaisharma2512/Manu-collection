@@ -31,7 +31,7 @@ export default function App() {
         </p>
       </section>
 
-      <section className="christmas-promo">
+      <section className="festival-promo">
         <h2>Holi & Ramzaan Sale! ✨</h2>
         <ul>
           <li>
@@ -81,6 +81,11 @@ export default function App() {
         </div>
       </section>
 
+      <section id="featured" className="featured">
+        <h2>Featured Products</h2>
+        <Products />
+      </section>
+
       <section id="categories" className="categories">
         <h2>Shop by Category</h2>
         <div className="grid">
@@ -107,10 +112,7 @@ export default function App() {
         </div>
       </section>
 
-      <section id="featured" className="featured">
-        <h2>Featured Products</h2>
-        <Products />
-      </section>
+
 
       <section id="glass-range" className="categories">
         <h2>Glass Range</h2>

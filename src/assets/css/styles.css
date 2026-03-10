@@ -266,7 +266,7 @@ footer {
   100% { background-position: 0% 50%; }
 }
 
-.christmas-promo {
+.festival-promo {
   width: 92%;
   max-width: 1600px;
   margin: 1.5em auto;
@@ -286,7 +286,7 @@ footer {
     inset 0 1px 0 rgba(255, 215, 0, 0.08);
 }
 
-.christmas-promo::before {
+.festival-promo::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0;
@@ -296,7 +296,7 @@ footer {
   animation: luxuryShimmer 3s ease infinite;
 }
 
-.christmas-promo h2 {
+.festival-promo h2 {
   margin-bottom: 0.3em;
   font-size: 2em;
   font-weight: 800;
@@ -310,7 +310,7 @@ footer {
   animation: luxuryShimmer 4s linear infinite;
 }
 
-.christmas-promo ul {
+.festival-promo ul {
   list-style: none;
   padding: 0;
   margin: 1.5em auto 0;
@@ -319,7 +319,7 @@ footer {
   font-size: 1em;
 }
 
-.christmas-promo ul li {
+.festival-promo ul li {
   margin-bottom: 1em;
   padding: 0.9em 1.2em;
   background: rgba(255, 215, 0, 0.06);
@@ -330,17 +330,17 @@ footer {
   transition: background 0.2s;
 }
 
-.christmas-promo ul li:hover {
+.festival-promo ul li:hover {
   background: rgba(255, 215, 0, 0.12);
 }
 
-.christmas-promo ul li::before {
+.festival-promo ul li::before {
   content: "✦ ";
   color: #ffd700;
   font-size: 0.85em;
 }
 
-.christmas-promo button {
+.festival-promo button {
   margin-top: 2em;
   background: linear-gradient(135deg, #b8860b, #ffd700, #b8860b);
   background-size: 200% auto;
@@ -358,7 +358,7 @@ footer {
   animation: luxuryShimmer 3s linear infinite;
 }
 
-.christmas-promo button:hover {
+.festival-promo button:hover {
   background-position: right center;
   box-shadow: 0 6px 28px rgba(255, 215, 0, 0.6);
   transform: translateY(-2px);
@@ -570,7 +570,7 @@ a.button:hover {
     margin: 0.5em 1em;
     padding: 1em;
   }
-  .christmas-promo {
+  .festival-promo {
     width: calc(100% - 2em);
     margin: 0.5em 1em;
     padding: 1.5em 1em;
