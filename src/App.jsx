@@ -1,5 +1,7 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Products from "./components/Products";
+import Admin from "./components/Admin";
 import "./assets/css/styles.css";
 
 export default function App() {
@@ -14,10 +16,11 @@ export default function App() {
         <a href="#about">About Us</a>
         <a href="#glass-range">Glass Range</a>
         <a href="#contact-form">Contact</a>
+        <a href="/admin" style={{color: 'red', fontWeight: 'bold'}}>🔐 Admin</a>
       </nav>
 
       <section className="hero">
-        <h2>Explore Premium Crockery, Appliances &amp; Gifts</h2>
+        <h2>Explore Premium Crockery, Appliances & Gifts</h2>
         <p>
           Luxury for your kitchen. Essentials for every home. Gifts for every
           occasion.
@@ -38,9 +41,8 @@ export default function App() {
         </p>
       </section>
 
-      {/* UPDATED: Christmas / New Year promo */}
       <section className="christmas-promo">
-        <h2>Christmas &amp; New Year Sale! 🎄✨</h2>
+        <h2>Holi & Ramzaan Sale! ✨</h2>
         <ul>
           <li>
             Old gas stove ke badle mein naye glass-top gas stove par heavy
@@ -48,7 +50,7 @@ export default function App() {
           </li>
           <li>
             Special Christmas Gift Combo Sets available hain, price range: 400,
-            600, 800, 1000, 2000, 3000 – friends &amp; family ke liye ready-made
+            600, 800, 1000, 2000, 3000 – friends & family ke liye ready-made
             gifts.
           </li>
           <li>
@@ -56,7 +58,7 @@ export default function App() {
             cookers par bhari chhoot.
           </li>
           <li>
-          Heavy discount on Induction Cookers and Electric Kettles
+            Heavy discount on Induction Cookers and Electric Kettles
           </li>
         </ul>
         <button
@@ -119,47 +121,7 @@ export default function App() {
 
       <section id="featured" className="featured">
         <h2>Featured Products</h2>
-        <div className="grid">
-          <div className="product-card">
-            <img src="/ladiessuit.jpg" alt="Ladies Suits" />
-            <h3>Ladies Suits</h3>
-            <p>Stylish, designer suits for special occasions.</p>
-            <a
-              href="https://chat.whatsapp.com/L5I4kbAogir7YlVWCR6dij?mode=ems_share_t"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="button"
-            >
-              Take quotation
-            </a>
-          </div>
-          <div className="product-card">
-            <img src="/water-purifier.jpg" alt="Water Purifiers" />
-            <h3>Water Purifiers</h3>
-            <p>Safe, clean water for your home.</p>
-            <a
-              href="https://wa.me/9412667937"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="button"
-            >
-              Take quotation
-            </a>
-          </div>
-          <div className="product-card">
-            <img src="/Chimney.jpg" alt="Chimneys" />
-            <h3>Chimneys</h3>
-            <p>High-quality kitchen chimneys for a cleaner cooking environment.</p>
-            <a
-              href="https://wa.me/9412667937"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="button"
-            >
-              Take quotation
-            </a>
-          </div>
-        </div>
+        <Products />
       </section>
 
       <section id="glass-range" className="categories">
@@ -189,37 +151,34 @@ export default function App() {
         <div className="review">
           "Main Manu Collection tohn 32-piece dinner set lita, quality bohot vadiya haigi aedi te design v bahut sohna aa. Ghar aunde mehman vi khush ho gaye, paisa vasool laggya ji" - Arjun Sandhu.
         </div>
-         <div className="review">
+        <div className="review">
           "Maine ek Phillips ka induction cooker liya tha jiski 24 hours mai service available ho gyi " - Riya Bisht.
         </div>
       </section>
 
-
-
-<section id="contact-form">
-  <h2>Contact Us</h2>
-  <p>
-    For any product enquiry, bulk order, or festive offer details, reach us on:
-  </p>
-  <ul style={{ listStyle: "none", padding: 0, margin: "1em 0" }}>
-    <li>
-      <strong>Phone / WhatsApp:</strong> 9412667937, 7055376261
-    </li>
-    <li>
-      <strong>Phone:</strong> 7055376261
-    </li>
-    <li>
-      <strong>Facebook:</strong> Manu Collections Bazpur
-    </li>
-        <li>
-      <strong>Instagram:</strong> manucollectionsbazpur
-    </li>
-    <li>
-      <strong>Store:</strong> Manu Collection Opp Adarsh Kanya Junior High School
-    </li>
-  </ul>
-</section>
-
+      <section id="contact-form">
+        <h2>Contact Us</h2>
+        <p>
+          For any product enquiry, bulk order, or festive offer details, reach us on:
+        </p>
+        <ul style={{ listStyle: "none", padding: 0, margin: "1em 0" }}>
+          <li>
+            <strong>Phone / WhatsApp:</strong> 9412667937, 7055376261
+          </li>
+          <li>
+            <strong>Phone:</strong> 7055376261
+          </li>
+          <li>
+            <strong>Facebook:</strong> Manu Collections Bazpur
+          </li>
+          <li>
+            <strong>Instagram:</strong> manucollectionsbazpur
+          </li>
+          <li>
+            <strong>Store:</strong> Manu Collection Opp Adarsh Kanya Junior High School
+          </li>
+        </ul>
+      </section>
 
       <section className="trust">
         <h2>Our Commitment to You</h2>
@@ -235,7 +194,7 @@ export default function App() {
           <li>Dedicated Customer Support Team</li>
         </ul>
         <p>
-          Thank you for being a valued customer. Our reputation as Bazpur&apos;s
+          Thank you for being a valued customer. Our reputation as Bazpur's
           oldest crockery shop is built on trust and exceptional service.
         </p>
       </section>
