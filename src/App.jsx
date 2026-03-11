@@ -1,80 +1,102 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Products from "./components/Products";
 import Admin from "./components/Admin";
 import "./assets/css/styles.css";
 
+function getCardWidth() {
+  if (window.innerWidth <= 400) return 120 + 16;
+  if (window.innerWidth <= 768) return 140 + 16;
+  return 220 + 16;
+}
+
 function InfiniteCarousel({ id, children }) {
-  const trackRef = useRef(null);
-  const currentRef = useRef(0);
   const childArray = Array.isArray(children) ? children : [children];
   const setCount = childArray.length;
-  const CARD_WIDTH = 236; // 220px card + 16px gap
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  // Triple the items for infinite illusion
   const loopedItems = [...childArray, ...childArray, ...childArray];
 
-  const jumpTo = (track, pos, animate) => {
-    track.style.scrollBehavior = animate ? "smooth" : "auto";
-    track.scrollLeft = pos * CARD_WIDTH;
-    currentRef.current = pos;
-    setActiveIndex(((pos % setCount) + setCount) % setCount);
-  };
+  const indexRef = useRef(setCount);
+  const isAnimatingRef = useRef(false);
+  const trackRef = useRef(null);
+  const intervalRef = useRef(null);
+  const cardWidthRef = useRef(getCardWidth());
+
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const goTo = useCallback((newIndex, animate) => {
+    const track = trackRef.current;
+    if (!track) return;
+    const CARD_WIDTH = cardWidthRef.current;
+
+    if (animate) {
+      track.style.transition = "transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)";
+      isAnimatingRef.current = true;
+    } else {
+      track.style.transition = "none";
+    }
+
+    track.style.transform = `translateX(-${newIndex * CARD_WIDTH}px)`;
+    indexRef.current = newIndex;
+    setActiveIndex(((newIndex % setCount) + setCount) % setCount);
+  }, [setCount]);
+
+  const handleTransitionEnd = useCallback(() => {
+    isAnimatingRef.current = false;
+    const cur = indexRef.current;
+    if (cur >= setCount * 2) {
+      goTo(cur - setCount, false);
+    } else if (cur < setCount) {
+      goTo(cur + setCount, false);
+    }
+  }, [setCount, goTo]);
 
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
 
-    // Start at the middle set instantly
-    jumpTo(track, setCount, false);
+    const handleResize = () => {
+      cardWidthRef.current = getCardWidth();
+      goTo(indexRef.current, false);
+    };
+    window.addEventListener("resize", handleResize);
 
-    const interval = setInterval(() => {
-      const next = currentRef.current + 1;
-      jumpTo(track, next, true);
+    goTo(setCount, false);
+    track.addEventListener("transitionend", handleTransitionEnd);
 
-      // After animation, silently reset to middle set if needed
-      setTimeout(() => {
-        if (currentRef.current >= setCount * 2) {
-          jumpTo(track, setCount + (currentRef.current % setCount), false);
-        }
-      }, 520);
+    intervalRef.current = setInterval(() => {
+      if (!isAnimatingRef.current) {
+        goTo(indexRef.current + 1, true);
+      }
     }, 3000);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(intervalRef.current);
+      track.removeEventListener("transitionend", handleTransitionEnd);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const scroll = (dir) => {
-    const track = trackRef.current;
-    if (!track) return;
-
-    const next = currentRef.current + dir;
-    jumpTo(track, next, true);
-
-    setTimeout(() => {
-      if (currentRef.current >= setCount * 2) {
-        jumpTo(track, setCount + (currentRef.current % setCount), false);
-      } else if (currentRef.current < setCount) {
-        jumpTo(track, setCount + ((currentRef.current % setCount + setCount) % setCount), false);
-      }
-    }, 520);
+    if (isAnimatingRef.current) return;
+    goTo(indexRef.current + dir, true);
   };
 
   return (
     <div className="carousel-wrapper-luxury">
       <button className="carousel-btn-luxury" onClick={() => scroll(-1)}>&#8249;</button>
 
-      <div className="carousel-track-luxury" id={id} ref={trackRef}>
-        {loopedItems.map((child, i) => {
-          const realIndex = i % setCount;
-          const isActive = realIndex === activeIndex;
-          return (
-            <div key={i} className={`luxury-card${isActive ? " luxury-card--active" : ""}`}>
-              {child}
-            </div>
-          );
-        })}
+      <div className="carousel-clip" id={id}>
+        <div className="carousel-track-luxury" ref={trackRef}>
+          {loopedItems.map((child, i) => {
+            const isActive = i === indexRef.current;
+            return (
+              <div key={i} className={`luxury-card${isActive ? " luxury-card--active" : ""}`}>
+                {child}
+              </div>
+            );
+          })}
+        </div>
       </div>
 
       <button className="carousel-btn-luxury" onClick={() => scroll(1)}>&#8250;</button>
