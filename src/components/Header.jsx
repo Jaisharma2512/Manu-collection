@@ -38,8 +38,15 @@ export default function Header() {
         <header className={`mobile-header ${scrolled ? "mobile-header--scrolled" : ""}`}>
           <div className="mobile-header__inner">
             <div className="mobile-logo">
-              <span className="mobile-logo__name">Manu Collection</span>
-              <span className="mobile-logo__sub">Bazpur's Finest Since 30 Years</span>
+              <img
+                src="/manucollection-logo.png"
+                alt="Manu Collection Logo"
+                className="mobile-logo__img"
+              />
+              <div className="mobile-logo__text">
+                <span className="mobile-logo__name">Manu Collection</span>
+                <span className="mobile-logo__sub">Bazpur's Finest Since 30 Years</span>
+              </div>
             </div>
             <button
               className={`hamburger-btn ${menuOpen ? "hamburger-btn--open" : ""}`}
